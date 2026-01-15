@@ -1,0 +1,172 @@
+/* ===============================
+   INTELLIGENT WORKFLOW BOARD CSS
+   =============================== */
+
+/* ---- Theme Tokens ---- */
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --column: #020617;
+  --border: #334155;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #22c55e;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---- Header ---- */
+.app-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: #020617;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* ---- Layout ---- */
+.layout {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---- Add Task Form ---- */
+.add-form {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.add-form input,
+.add-form select,
+.add-form button {
+  padding: .6rem .8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+}
+
+.add-form button {
+  background: var(--primary);
+  color: #022c22;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-form button:hover {
+  filter: brightness(1.1);
+}
+
+/* ---- Board ---- */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* ---- Column ---- */
+.column {
+  background: var(--column);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.column h3 {
+  margin: 0 0 .5rem;
+  font-size: .95rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ---- Column List ---- */
+.column-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  flex-grow: 1;
+}
+
+/* ---- Empty Column ---- */
+.empty {
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+  padding: .75rem 0;
+}
+
+/* ---- Task Card ---- */
+.task-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.task-card strong {
+  font-size: .9rem;
+}
+
+.task-card small {
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+/* ---- Move Button ---- */
+.task-card button {
+  margin-top: .3rem;
+  padding: .35rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--primary);
+  color: #022c22;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.task-card button:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+/* ---- Status Button ---- */
+.status-btn {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+  font-size: .7rem;
+  padding: .25rem .4rem;
+  border-radius: 6px;
+  cursor: default;
+}
+}

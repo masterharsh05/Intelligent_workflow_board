@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Work Planner</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+      <header class="app-header">
+        <h1>Intelligent Workflow Board</h1>
+      </header>
+
+      <main class="layout">
+
+      <!-- Add Task -->
+      <form id="addForm" class="add-form">
+        <input id="taskInput" placeholder="Task title" required />
+        <input id="descInput" placeholder="Task description" />
+        <input id="workInput" placeholder="Work Status" />
+        <select id="prioritySelect" required>
+          <option value="">Priority</option>
+          <option>High</option>
+          <option>Medium</option>
+          <option>Low</option>
+        </select>
+        <input id="assigneeInput" placeholder="Assignee" />
+        <button type="submit">Add</button>
+      </form>
+
+      <!-- Workflow Board -->
+      <section class="board">
+        <div class="column" data-status="BACKLOG">
+          <h3>Backlog</h3>
+          <ul class="column-list"></ul>
+        </div>
+
+        <div class="column" data-status="IN_PROGRESS">
+          <h3>In Progress</h3>
+          <ul class="column-list"></ul>
+        </div>
+
+        <div class="column" data-status="REVIEW">
+          <h3>Review</h3>
+          <ul class="column-list"></ul>
+        </div>
+
+        <div class="column" data-status="DONE">
+          <h3>Done</h3>
+          <ul class="column-list"></ul>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="script1.js"></script>
+  </body>
+</html>
