@@ -30,11 +30,13 @@ body {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--border);
   background: #020617;
+  text-align: center;
 }
 
 .app-header h1 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 /* ---- Layout ---- */
